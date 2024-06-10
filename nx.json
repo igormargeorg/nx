@@ -65,5 +65,20 @@
       }
     }
   },
-  "nxCloudAccessToken": "ZmVjYjg0M2YtZGUyMS00ZGMwLWE4YTYtNGFiNzY1NzU5NjFmfHJlYWQtd3JpdGU="
+  "nxCloudAccessToken": "ZmVjYjg0M2YtZGUyMS00ZGMwLWE4YTYtNGFiNzY1NzU5NjFmfHJlYWQtd3JpdGU=",
+  "targetDefaults": {
+    "build": {
+      "cache": true,
+      "dependsOn": ["^build"]
+    },
+    "@nx/webpack:webpack": {
+      "inputs": [
+        "production",
+        "^production",
+        {
+          "env": "NX_MF_DEV_SERVER_STATIC_REMOTES"
+        }
+      ]
+    }
+  }
 }
